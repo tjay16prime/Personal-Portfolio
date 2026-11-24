@@ -1,0 +1,108 @@
+:root {
+  color-scheme: dark;
+  --black: #090a0e;
+  --panel: #11141d;
+  --border: #2a2e39;
+  --white: #f4f5f9;
+  --muted: #b2b8c8;
+  --blue: #809bff;
+  --solid: #3159ed;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+}
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 1rem }
+body { margin: 0; background: var(--black); color: var(--white); font: 1rem/1.65 "Inter", Arial, sans-serif }
+.shell { width: min(1190px, 90%); margin-inline: auto }
+a { color: inherit; text-underline-offset: .25em }
+a:hover { color: var(--blue) }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #a9c3ff; outline-offset: 4px }
+.skip { position: absolute; z-index: 4; top: -5rem; left: 1rem; background: white; color: black; padding: .6rem }
+.skip:focus { top: .5rem }
+header, nav, .actions, .social, footer { display: flex; align-items: center; gap: 1rem }
+header { min-height: 78px; justify-content: space-between; border-bottom: 1px solid var(--border) }
+.brand img { display: block; width: 100px }
+.brand { background: #eff2ff; padding: 8px 10px; border-radius: 4px }
+nav { gap: clamp(.8rem, 3vw, 2.4rem) }
+nav a, footer a { font-size: .92rem; text-decoration: none }
+.contact-nav, .btn { padding: .48rem 1.05rem; border: 1px solid #4c5364; border-radius: 5px }
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 1rem; min-height: clamp(490px, 45vw, 620px); padding-block: 3.5rem }
+.eyebrow, .meta, .tags, .hardware figcaption, .facts i, .earth small, .terminal, .pending { font-family: var(--mono) }
+.eyebrow { display: flex; align-items: center; gap: .75rem; color: var(--blue); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; margin: 0 0 1.2rem }
+.rule { width: 2.4rem; height: 2px; background: var(--solid) }
+h1, h2, h3 { line-height: 1.08; letter-spacing: -.047em; margin: 0 }
+h1 { font-size: clamp(2.9rem, 5.5vw, 5.5rem); font-weight: 750 }
+h1 span { color: #8ea7ff }
+h2 { font-size: clamp(2.2rem, 4vw, 3.65rem); margin-bottom: 1.75rem }
+h2 span { color: var(--blue) }
+h3 { font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.16 }
+p, dd, .credentials { color: var(--muted) }
+strong { color: var(--white) }
+.lead { font-size: 1.08rem; max-width: 48ch; margin: 1.4rem 0 1.7rem }
+.actions, .social { flex-wrap: wrap }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; padding: .65rem 1.15rem; text-decoration: none; font-weight: 650 }
+.primary { color: #fff; background: var(--solid); border-color: var(--solid) }
+.primary:hover { color: white; background: #3c62ff }
+.hardware { margin: 0; min-width: 0; position: relative }
+.hardware img { display: block; width: 100%; border-radius: 9px; mask-image: radial-gradient(ellipse 73% 73%,black 52%, transparent 92%) }
+.hardware figcaption { text-align: right; padding-right: 1rem; font-size: .78rem; color: var(--muted) }
+.hardware figcaption span { color: var(--blue); margin-inline: .4rem }
+.profile-strip { border-block: 1px solid var(--border); background: #0e1016 }
+.facts { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.2rem }
+.facts i { display: block; color: var(--blue); font-style: normal; font-size: .76rem; text-transform: uppercase; letter-spacing: .1em }
+.section { padding-block: clamp(3rem, 6vw, 5rem); border-bottom: 1px solid var(--border) }
+.ozone, .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 4rem) }
+.ozone { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; align-items: stretch; background: var(--panel); gap: 0 }
+.ozone-copy { padding: clamp(1.4rem, 3.8vw, 3rem) }
+.ozone-copy h3 { font-size: 2.3rem }
+.meta, .tags { font-size: .82rem; color: var(--blue) }
+.earth { position: relative; overflow: hidden; min-height: 240px; background: radial-gradient(ellipse at 50% 75%, #183c9a, #101d49 52%, #0c1226 84%) }
+.earth canvas { width: 100%; height: 100%; position: absolute; object-fit: cover }
+.earth small { position: absolute; bottom: .85rem; left: 1.15rem; color: #d4deff; letter-spacing: .11em; font-size: .74rem }
+.textlink { color: #a9baff; font-weight: 650 }
+.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem }
+.projects article, .support, .game, .skills { border: 1px solid var(--border); background: var(--panel); border-radius: 9px; padding: clamp(1.25rem, 2.5vw, 2rem) }
+.projects article { display: flex; flex-direction: column; align-items: flex-start }
+.projects .tags { margin-top: auto }
+.symbol { color: var(--blue); font: 1.55rem var(--mono) }
+.history article { padding: 1.25rem 0; border-bottom: 1px solid var(--border) }
+.history article:first-child { padding-top: 0 }
+.history p { margin: .4rem 0 }
+.skills dl { margin-bottom: 0 }
+dt { font-weight: bold; margin-top: .9rem }
+dd { margin-left: 0 }
+details { margin-top: 1.6rem; border-block: 1px solid var(--border); padding: .85rem .3rem }
+summary { cursor: pointer; font-weight: 650 }
+summary span { color: var(--muted); font-size: .85rem; font-weight: normal; margin-left: .6rem }
+.credentials { padding-left: 1.5rem; overflow-wrap: anywhere }
+.game { text-align: center; background: linear-gradient(145deg,#121d37,#11141d) }
+.board { margin: 0 auto; display: grid; width: max-content; grid-template-columns: 38px 62px 62px 48px; align-items: center; justify-items: center; gap: 3px }
+.terminal { font-size: .8rem; color: #c9d6ff }
+.tile { cursor: pointer; height: 62px; width: 62px; position: relative; border: 1px solid #586681; background: #202b43; border-radius: 6px }
+.tile:hover { border-color: #b7c9ff }
+.wire { display: block; position: absolute; inset: 0 }
+.wire::before, .wire::after { content: ''; position: absolute; background: #90b0ff }
+.wire::before { left: calc(50% - 3px); top: 0; width: 6px; height: calc(50% + 3px) }
+.wire::after { top: calc(50% - 3px); left: 50%; height: 6px; width: 50% }
+#lamp.lit { color: #fff; text-shadow: 0 0 9px #58acff }
+#reset { border: 1px solid #586681; color: white; padding: .45rem 1rem; background: transparent; border-radius: 4px; font: inherit; cursor: pointer }
+.social { margin-top: 1.3rem; font-size: .95rem }
+.pending { font-size: .84rem; color: var(--blue) }
+#donate[href=""], #donate:not([href=""]) + .pending { display: none }
+footer { justify-content: space-between; padding-block: 1.6rem; color: var(--muted) }
+@media(max-width: 760px) {
+  .hero, .split, .ozone, .projects { grid-template-columns: 1fr }
+  .hero { padding-block: 2.5rem 1.5rem }
+  .hardware { width: min(100%, 420px); justify-self: center }
+  .facts { flex-wrap: wrap }
+  .projects article { display: block }
+  header { gap: .75rem; min-height: 68px; flex-wrap: wrap; padding-block: .7rem }
+  nav { flex-wrap: wrap; gap: .9rem }
+  .brand img { width: 70px }
+  .contact-nav { padding: 0; border: 0 }
+}
+@media(max-width: 430px) {
+  nav a { font-size: .85rem }
+  .facts { display: grid; gap: .65rem }
+  .game { padding-inline: .5rem }
+}
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
